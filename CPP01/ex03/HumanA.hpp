@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 13:56:49 by esimpson          #+#    #+#             */
-/*   Updated: 2024/12/28 15:49:47 by esimpson         ###   ########.fr       */
+/*   Created: 2024/12/30 15:34:10 by esimpson          #+#    #+#             */
+/*   Updated: 2024/12/30 16:01:12 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
+#ifndef HUMAN_A_HPP
+# define HUMAN_A_HPP
 
-Zombie::Zombie(std::string name)
-{
-    this->_name = name;
-}
+# include <iostream>
 
-Zombie::~Zombie()
-{
-    std::cout<<this->_name<<" died." <<std::endl;
-}
-
-void Zombie::announce(void)
-{
-    std::cout<<this->_name<<": BraiiiiiiinnnzzzZ..."<<std::endl;
-}
-
+#endif

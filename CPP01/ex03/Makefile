@@ -6,11 +6,11 @@
 #    By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/21 13:26:33 by esimpson          #+#    #+#              #
-#    Updated: 2024/12/28 15:48:09 by esimpson         ###   ########.fr        #
+#    Updated: 2024/12/30 15:30:08 by esimpson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	zombieHorde
+NAME		=	violence
 
 CC			=	c++
 
@@ -25,7 +25,7 @@ SRC_DIR = ./
 OBJ_DIR = obj/
 
 #source files
-SRC_FILES	= Zombie.cpp main.cpp zombieHorde.cpp
+SRC_FILES	= main.cpp
 OBJ_FILES	= $(SRC_FILES:%.cpp=%.o)
 
 #paths
