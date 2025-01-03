@@ -6,13 +6,19 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:52:59 by esimpson          #+#    #+#             */
-/*   Updated: 2024/12/30 16:03:59 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/02 15:13:40 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(): _type("")
+Weapon::Weapon()
+	: _type("")
+{
+}
+
+Weapon::Weapon(std::string type)
+	: _type(type)
 {
 }
 

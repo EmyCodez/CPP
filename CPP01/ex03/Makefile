@@ -6,7 +6,7 @@
 #    By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/21 13:26:33 by esimpson          #+#    #+#              #
-#    Updated: 2024/12/30 15:30:08 by esimpson         ###   ########.fr        #
+#    Updated: 2025/01/02 13:26:50 by esimpson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC_DIR = ./
 OBJ_DIR = obj/
 
 #source files
-SRC_FILES	= main.cpp
+SRC_FILES	= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJ_FILES	= $(SRC_FILES:%.cpp=%.o)
 
 #paths
