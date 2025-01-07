@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 16:07:17 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/07 16:24:17 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/07 16:26:04 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,10 @@ void Harl::complain(std::string level)
 	{
 	case 0:
 		(this->*functionPtrs[0])();
-		break ;
 	case 1:
 		(this->*functionPtrs[1])();
-		break ;
 	case 2:
 		(this->*functionPtrs[2])();
-		break ;
 	case 3:
 		(this->*functionPtrs[3])();
 		break ;

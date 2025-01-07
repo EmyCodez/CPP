@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/04 16:23:02 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/07 16:28:19 by esimpson         ###   ########.fr       */
+/*   Created: 2025/01/04 16:24:42 by esimpson          #+#    #+#             */
+/*   Updated: 2025/01/06 16:22:39 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#pragma once
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int	main(int argc, char **argv)
+# include <iostream>
+
+class Harl
 {
-	Harl harl;
-	if (argc == 2)
-		harl.complain(argv[1]);
-	else
-		harl.complain("unknown string");
-	return (0);
-}
+  private:
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
+
+  public:
+	Harl();
+	~Harl();
+
+	void complain(std::string level);
+};
+
+#endif
