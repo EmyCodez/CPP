@@ -1,0 +1,19 @@
+Solution:
+This method uses the concept that the area of a triangle can be decomposed
+into the sum of areas of smaller triangles formed by the point in question and
+the vertices of the triangle.
+
+Let the coordinates of the three angles be (x1, y1), (x2, y2), and (x3, y3).
+The coordinates of the given point P are (x, y). 
+
+Calculate the area of ​​the given triangle, i.e. the area of ​​triangle ABC. 
+Area A = [x1(y2 – y3) + x2(y3 – y1) + x3(y1-y2)]/2 
+Calculate the area of ​​triangle PAB. We can use the same formula for this. Let this area be A1. 
+Calculate the area of ​​triangle PBC. Let this area be A2. 
+Calculate the area of ​​triangle PAC. Let this area be A3. 
+If P lies inside the triangle, then A1 + A2 + A3 must equal A. 
+
+Additionally, all individual areas must be positive (non-zero).
+
+If any of the sub-areas is zero, the point lies on the edge of the triangle.
+If the areas are non-negative but don't sum exactly to the area of the triangle, the point is outside the triangle.
