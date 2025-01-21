@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 13:22:30 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/21 12:15:51 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/21 12:34:37 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &scav)
     return (*this);
 }
 
-ScavTrap::~ScavTrap() 
+ScavTrap::~ScavTrap()
 {
     std::cout << "ScavTrap " << getName() <<  " destructor called." << std::endl;
 }
