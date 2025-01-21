@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 16:14:07 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/18 12:27:09 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:37:56 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 
 class ClapTrap
 {
-private:
+ protected:
     std::string _name;
     unsigned int _hitPoints;
     unsigned int _energyPoints;
     unsigned int _attackDamage;
     
-public:
+ public:
     ClapTrap(void);
     ClapTrap(const std::string &name);
     ClapTrap(const ClapTrap &clap);

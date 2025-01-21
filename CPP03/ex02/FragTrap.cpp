@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 16:03:13 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/21 12:36:26 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:34:07 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,5 @@ FragTrap::~FragTrap()
 //member functions
 void FragTrap::highFivesGuys(void)
 {
-    std::cout <<  "FragTrap " << getName() <<  " wants a high five." << std::endl;
+    std::cout <<  "FragTrap " << getName() <<  " requests a \033[33mhigh five!\033[0m" << std::endl;
 }
