@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 13:17:52 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/20 15:29:08 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:09:58 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ class ScavTrap : public ClapTrap
     ScavTrap(const ScavTrap &scav);
     ScavTrap &operator= (const ScavTrap &scav);
     ~ScavTrap();
+    
     //member functions  
     void guardGate();  
     void attack(const std::string& target);
 };
+
 #endif

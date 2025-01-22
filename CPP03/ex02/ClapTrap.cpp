@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 12:45:30 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/21 13:25:27 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/22 12:35:07 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ ClapTrap::ClapTrap(void):_name("Unknown"),_hitPoints(10),_energyPoints(10),_atta
     std::cout << "ClapTrap Default constructor called." << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string &name): _name(name),_hitPoints(10),_energyPoints(10),_attackDamage(0) 
+ClapTrap::ClapTrap(const std::string &name, unsigned int hitPoints, unsigned int energyPoints, unsigned int attackDamage)
+: _name(name),_hitPoints(hitPoints),_energyPoints(energyPoints),_attackDamage(attackDamage) 
 {
      std::cout << "ClapTrap " << name << " constructor called." << std::endl;
 }
@@ -105,46 +106,4 @@ void ClapTrap::beRepaired(unsigned int amount)
         std::cout << "\033[34mClapTrap " << _name;
         std::cout << " do not have any hit points left to repair!\033[0m"<< std::endl;
     }    
-}
-
-//getters
-std::string ClapTrap::getName(void)
-{
-    return (this->_name);
-}
-
-unsigned int ClapTrap::getHitPoints(void)
-{
-    return (this->_hitPoints);
-}
-
-unsigned int ClapTrap::getEnergyPoints(void)
-{
-    return (this->_energyPoints);
-}
-
-unsigned int ClapTrap::getAttackDamage(void)
-{
-    return (this->_attackDamage);
-}
-
-//setters
-void ClapTrap::setName(std::string name)
-{
-    this->_name = name;
-}
-
-void ClapTrap::setHitPoints(unsigned int points)
-{
-    this->_hitPoints = points;
-}
-
-void ClapTrap::setEnergyPoints(unsigned int points)
-{
-    this->_energyPoints = points;
-}
-
-void ClapTrap::setAttackDamage(unsigned int points)
-{
-    this->_attackDamage = points;
 }
