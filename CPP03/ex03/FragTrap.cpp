@@ -6,13 +6,13 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 16:03:13 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/24 16:24:44 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/25 13:08:48 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void) : ClapTrap()
+FragTrap::FragTrap(void)
 {
     _hitPoints = 100;
     _energyPoints = 100;

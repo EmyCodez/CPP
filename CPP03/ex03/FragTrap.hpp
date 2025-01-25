@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:57:24 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/24 16:24:59 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/24 16:22:25 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 
 public:
@@ -28,6 +28,7 @@ public:
 
     //member functions
     void highFivesGuys(void);
+    
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 15:57:34 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/22 15:58:21 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/25 13:25:33 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(void)
     FragTrap s1("Stomp");
     FragTrap s2("Frog");
     FragTrap s3("Fox");
-    
+     
     for (int i=0; i < 2; i++)
     {
         s3.highFivesGuys();

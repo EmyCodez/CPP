@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 13:22:30 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/22 13:37:22 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/25 13:20:04 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void ScavTrap::attack(const std::string &target)
        {
           std::cout << "\033[31mScavTrap " << _name << " attacks " << target;
           std::cout << ".\033[0m" <<std::endl;
+          this->_energyPoints-- ;
        }
      else 
         std::cout << "\033[31mClapTrap " << _name << " cannot attack !\033[0m" << std::endl;   
