@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/25 16:05:27 by esimpson          #+#    #+#             */
+/*   Updated: 2025/01/25 16:12:42 by esimpson         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+# pragma once
+# ifndef CAT_HPP
+# define CAT_HPP
+
+#include "Animal.hpp"
+
+class  Cat : public Animal
+{
+
+public:
+     Cat(void);
+     Cat(const std::string &type);
+     Cat(const Cat &cat);
+     Cat &operator= (const Cat &cat);
+     ~Cat();
+     
+    //member functions
+    void makeSound() const;
+};
+
+#endif
