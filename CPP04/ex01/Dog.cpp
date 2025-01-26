@@ -6,7 +6,7 @@
 /*   By: emilin <emilin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 14:35:01 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/26 10:40:14 by emilin           ###   ########.fr       */
+/*   Updated: 2025/01/26 15:37:02 by emilin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,37 @@
 Dog::Dog(void) 
 {
     _type = "Dog";
-    std::cout << "Dog default constructor created!" << std::endl;
+    brain = new Brain();
+    std::cout << "Dog constructor created!" << std::endl;
 }
 
-Dog::Dog(const std::string &type) : Animal(type)
+Dog::Dog(const std::string &type, const std::string &idea) : Animal(type)
 {
+    brain = new Brain(idea);
     std::cout << "Dog constructor of type "<< _type <<" created." <<std::endl; 
 }
 
 Dog::Dog(const Dog &dog) : Animal(dog)
 {
-    *this = dog;
+    brain = new Brain(*dog.brain);
     std::cout<< "Copy of Dog of type "<< _type<<" created." << std::endl;
 }
 
 Dog& Dog::operator=(const Dog &dog)
 {
     if(this != &dog)
-        Animal::operator= (dog);
+    {
+         Animal::operator= (dog);
+         delete brain;
+         brain = new Brain(*dog.brain);
+    }
     std::cout << "Dog assignment operator of type "<< _type <<" created." <<std::endl;  
     return(*this);  
 }
 
 Dog::~ Dog()
 {
+    delete brain;
     std::cout << "Dog destructor: Woof, goodbye!" << std::endl;
 }
 
@@ -47,4 +54,12 @@ Dog::~ Dog()
 void Dog::makeSound() const 
 {
     std::cout << "Woof! Woof! Woof! " << std::endl;
+}
+
+void Dog::getBrainIdea(int count) const
+{
+    if(count > 1 && count < 100)
+        this->brain->printIdeas(count);
+    else
+        std::cerr<<"Invalid count!! Please choose from 1-100." << std::endl;    
 }

@@ -6,39 +6,46 @@
 /*   By: emilin <emilin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 16:07:39 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/26 10:39:57 by emilin           ###   ########.fr       */
+/*   Updated: 2025/01/26 15:40:10 by emilin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(void) 
+Cat::Cat(void) : Animal() 
 {
     _type = "Cat";
-    std::cout << "Cat default constructor created!" << std::endl;
+    brain = new Brain();
+    std::cout << "Cat constructor created!" << std::endl;
 }
 
-Cat::Cat(const std::string &type) : Animal(type)
+Cat::Cat(const std::string &type, const std::string &idea) : Animal(type)
 {
     std::cout << "Cat constructor of type "<< _type <<" created." <<std::endl; 
+    brain = new Brain(idea);
 }
 
 Cat::Cat(const Cat &cat) : Animal(cat)
 {
-    *this = cat;
+    brain = new Brain(*cat.brain);
     std::cout<< "Copy of Cat of type "<< _type<<" created." << std::endl;
 }
 
 Cat& Cat::operator=(const Cat &cat)
 {
     if(this != &cat)
-        Animal::operator= (cat);
+    {
+        delete brain;
+        Animal::operator=(cat);
+        brain = new Brain(*cat.brain);
+    }
     std::cout << "Cat assignment operator of type "<< _type <<" created." <<std::endl;  
     return(*this);  
 }
 
 Cat::~ Cat()
 {
+    delete brain;
     std::cout << "Cat destructor: Meow, goodbye!" << std::endl;
 }
 
@@ -47,4 +54,12 @@ Cat::~ Cat()
 void Cat::makeSound() const 
 {
     std::cout << "Meow! Meow! Meow! " << std::endl;
+}
+
+void Cat::getBrainIdea(int count) const
+{
+    if(count > 1 && count < 100)
+        this->brain->printIdeas(count);
+    else
+        std::cerr<<"Invalid count!! Please choose from 1-100." << std::endl;    
 }
