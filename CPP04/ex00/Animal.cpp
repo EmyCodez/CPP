@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: emilin <emilin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 13:55:33 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/25 16:43:05 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/26 10:02:14 by emilin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Animal::Animal(void)
 {
     std::cout<< "Default Animal created." << std::endl;
-    _type = "Unnamed";
+    _type = "Default";
 }
 
 Animal::Animal(const std::string &type) : _type(type)

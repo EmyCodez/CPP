@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: emilin <emilin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 14:35:01 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/25 17:09:53 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/26 09:38:24 by emilin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(void) : Animal() 
+Dog::Dog(void) 
 {
     _type = "Dog";
     std::cout << "Dog constructor created!" << std::endl;

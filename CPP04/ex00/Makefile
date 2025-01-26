@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+         #
+#    By: emilin <emilin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/21 13:26:33 by esimpson          #+#    #+#              #
-#    Updated: 2025/01/25 16:15:03 by esimpson         ###   ########.fr        #
+#    Updated: 2025/01/26 09:58:49 by emilin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC_DIR = ./
 OBJ_DIR = obj/
 
 #source files
-SRC_FILES	= main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC_FILES	= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ_FILES	= $(SRC_FILES:%.cpp=%.o)
 
 #paths
