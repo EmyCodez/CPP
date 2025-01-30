@@ -6,11 +6,10 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 13:54:26 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/25 15:47:11 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/28 12:10:23 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# pragma once
 # ifndef ANIMAL_HPP
 # define ANIMAL_HPP
 

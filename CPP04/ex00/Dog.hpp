@@ -6,11 +6,10 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 14:31:11 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/25 16:11:36 by esimpson         ###   ########.fr       */
+/*   Updated: 2025/01/28 12:12:22 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# pragma once
 # ifndef DOG_HPP
 # define DOG_HPP
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emilin <emilin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 13:55:33 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/26 10:02:14 by emilin           ###   ########.fr       */
+/*   Updated: 2025/01/27 17:11:50 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ Animal::Animal(const std::string &type) : _type(type)
     std::cout << "Animal constructor of type : " << _type <<"  is created."<< std::endl;
 }
 
-Animal::Animal(const Animal &copy)
+Animal::Animal(const Animal &copy) : _type(copy._type)
 {
-    *this = copy;
     std::cout<< "Copy of Animal of type "<< _type<<" created." << std::endl;
 }
 

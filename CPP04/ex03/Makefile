@@ -3,54 +3,32 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: emilin <emilin@student.42.fr>              +#+  +:+       +#+         #
+#    By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/21 13:26:33 by esimpson          #+#    #+#              #
-#    Updated: 2025/01/27 09:59:19 by emilin           ###   ########.fr        #
+#    Created: 2025/01/28 12:24:18 by esimpson          #+#    #+#              #
+#    Updated: 2025/01/28 12:24:21 by esimpson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	recap
+NAME = recap
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-CC			=	c++
+SRCS = main.cpp AMateria.cpp Cure.cpp Ice.cpp Character.cpp MateriaSource.cpp
 
-CFLAGS		=	-Wall -Werror -Wextra -std=c++98
-
-# color codes
-RESET		=	\033[0m
-GREEN		=	\033[32m
-
-#directories
-SRC_DIR = ./
-OBJ_DIR = obj/
-
-#source files
-SRC_FILES	= main.cpp
-OBJ_FILES	= $(SRC_FILES:%.cpp=%.o)
-
-#paths
-SRC = $(addprefix $(SRC_DIR),$(SRC_FILES))
-OBJ = $(addprefix $(OBJ_DIR), $(OBJ_FILES))
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(GREEN)SUCCESSFULLY MADE $(words $(OBJ)) object files$(RESET)"
-
-#compile objects
-$(OBJ_DIR)%.o : $(SRC_DIR)%.cpp 
-	@mkdir -p $(OBJ_DIR)
-	@$(CC) -c $(CFLAGS) $< -o $@
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
-	@if [ -d "$(OBJ_DIR)" ]; then \
-	rm -rf $(OBJ_DIR); \
-	fi; 
-
+	rm -f $(OBJS)
+	
 fclean: clean
-	@if [ -f "$(NAME)" ]; then \
-	rm -rf $(NAME); \
-	fi;
+	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

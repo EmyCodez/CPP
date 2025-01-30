@@ -1,6 +1,17 @@
-# pragma once
-# ifndef CURE_HPP
-# define CURE_HPP
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/28 12:23:22 by esimpson          #+#    #+#             */
+/*   Updated: 2025/01/28 12:23:24 by esimpson         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+# ifndef Cure_HPP
+# define Cure_HPP
 
 #include "AMateria.hpp"
 #include "ICharacter.hpp"

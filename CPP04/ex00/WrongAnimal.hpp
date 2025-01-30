@@ -1,9 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/27 12:41:39 by esimpson          #+#    #+#             */
+/*   Updated: 2025/01/28 12:13:07 by esimpson         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-# pragma once
 # ifndef WRONGANIMAL_HPP
 # define WRONGANIMAL_HPP
 
-#include <iostream>
+# include <iostream>
 
 class WrongAnimal
 {

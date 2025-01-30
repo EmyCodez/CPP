@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emilin <emilin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 16:07:39 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/26 10:39:57 by emilin           ###   ########.fr       */
+/*   Updated: 2025/01/28 12:11:47 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Cat::Cat(void) 
 {
     _type = "Cat";
-    std::cout << "Cat default constructor created!" << std::endl;
+     std::cout << "Cat default constructor created!" << std::endl;
 }
 
 Cat::Cat(const std::string &type) : Animal(type)

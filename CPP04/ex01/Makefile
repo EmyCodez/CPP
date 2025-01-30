@@ -3,54 +3,33 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: emilin <emilin@student.42.fr>              +#+  +:+       +#+         #
+#    By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/21 13:26:33 by esimpson          #+#    #+#              #
-#    Updated: 2025/01/26 14:04:48 by emilin           ###   ########.fr        #
+#    Created: 2025/01/28 12:16:21 by esimpson          #+#    #+#              #
+#    Updated: 2025/01/28 12:19:29 by esimpson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	animalBrain
+NAME = animal
 
-CC			=	c++
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-CFLAGS		=	-Wall -Werror -Wextra -std=c++98
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 
-# color codes
-RESET		=	\033[0m
-GREEN		=	\033[32m
-
-#directories
-SRC_DIR = ./
-OBJ_DIR = obj/
-
-#source files
-SRC_FILES	= main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
-OBJ_FILES	= $(SRC_FILES:%.cpp=%.o)
-
-#paths
-SRC = $(addprefix $(SRC_DIR),$(SRC_FILES))
-OBJ = $(addprefix $(OBJ_DIR), $(OBJ_FILES))
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(GREEN)SUCCESSFULLY MADE $(words $(OBJ)) object files$(RESET)"
-
-#compile objects
-$(OBJ_DIR)%.o : $(SRC_DIR)%.cpp 
-	@mkdir -p $(OBJ_DIR)
-	@$(CC) -c $(CFLAGS) $< -o $@
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
-	@if [ -d "$(OBJ_DIR)" ]; then \
-	rm -rf $(OBJ_DIR); \
-	fi; 
-
+	rm -f $(OBJS)
+	
 fclean: clean
-	@if [ -f "$(NAME)" ]; then \
-	rm -rf $(NAME); \
-	fi;
+	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

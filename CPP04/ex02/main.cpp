@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emilin <emilin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 13:56:03 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/26 18:35:40 by emilin           ###   ########.fr       */
+/*   Updated: 2025/01/27 14:15:14 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 #include "Cat.hpp"
 #include "Brain.hpp"
 
+// Animal *a1 = new Animal(); -- to test abstract class
+// a1->makeSound();
 
 int main()
 {
-    // Animal *a1 = new Animal();
-    // a1->makeSound();
     Animal *animals[8];
 
     for(int i = 0; i < 4 ; ++i)
@@ -30,16 +30,14 @@ int main()
          animals[i]->makeSound();
     for(int i = 0; i < 8; ++i)
          delete animals[i];
-    // testing for deep copy
-    //Dog *d1 = new Dog("Bulldog","I will chase it!");
-    //Dog *d2 = new Dog(*d1);
+    
     Cat *d1 = new Cat("Cat","I will chase it!");
     Cat *d2 = new Cat(*d1);
-    d1->getBrainIdea(3);
+    d1->getBrainIdea(2);
     delete d1;
     std::cout<<"Cloned type: " << d2->getType() <<std::endl;
     std::cout<< "Ideas"<<std::endl;
-    d2->getBrainIdea(3);
+    d2->getBrainIdea(2);
     delete d2; 
     return 0;
 }

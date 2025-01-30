@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emilin <emilin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 14:31:11 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/26 15:30:50 by emilin           ###   ########.fr       */
+/*   Updated: 2025/01/28 12:22:14 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# pragma once
 # ifndef DOG_HPP
 # define DOG_HPP
 

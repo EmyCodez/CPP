@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emilin <emilin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 16:05:27 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/26 15:39:08 by emilin           ###   ########.fr       */
+/*   Updated: 2025/01/28 12:22:08 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# pragma once
 # ifndef CAT_HPP
 # define CAT_HPP
 

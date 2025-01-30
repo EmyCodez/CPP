@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/28 12:23:13 by esimpson          #+#    #+#             */
+/*   Updated: 2025/01/28 12:23:14 by esimpson         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Cure.hpp"
 
 Cure::Cure(void) 
@@ -21,7 +33,7 @@ Cure::~Cure() {}
 //member functions
 AMateria *Cure::clone() const
 {
-    return(new Cure(_type));
+    return(new Cure(*this));
 }
 
 void Cure::use(ICharacter &target)

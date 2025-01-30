@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/25 14:31:11 by esimpson          #+#    #+#             */
-/*   Updated: 2025/01/27 12:56:24 by esimpson         ###   ########.fr       */
+/*   Created: 2025/01/28 12:24:35 by esimpson          #+#    #+#             */
+/*   Updated: 2025/01/28 12:24:39 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# pragma once
-# ifndef DOG_HPP
-# define DOG_HPP
+# ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include "AMateria.hpp"
+# include "IMateriaSource.hpp"
 
-class  Dog : public Animal
+class MateriaSource : public IMateriaSource
 {
   private:
-    Brain *brain;
-    
+    AMateria *_materias[4]; 
+    int _materiaCount;
+
   public:
-     Dog(void);
-     Dog(const std::string &type, const std::string &idea);
-     Dog(const Dog &dog);
-     Dog &operator= (const Dog &dog);
-     ~Dog();
-     
+    MateriaSource();
+    MateriaSource(const MateriaSource &copy);
+    MateriaSource &operator= (const MateriaSource &copy);
+    ~MateriaSource();
+
     //member functions
-    void makeSound() const;
-    void getBrainIdea(int count) const;
+    void learnMateria(AMateria *m);
+    AMateria *createMateria(const std::string &type);
 };
 
-#endif
+# endif
